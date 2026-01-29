@@ -1,11 +1,12 @@
 import typer
 from .welcome import welcome
-from .fid_jobs.audio import audio_main
-from .fid_jobs.compressor import compress_main
-from .fid_jobs.frames import frames_main
-from .fid_jobs.gif import gif_main
+from .fid_jobs.extract.audio import audio_main
+from .fid_jobs.extract.frames import frames_main
+from .fid_jobs.audio.mute import mute_main
+from .fid_jobs.video.compressor import compress_main
+from .fid_jobs.video.gif import gif_main
 from .fid_jobs.info import info_main
-from .fid_jobs.mute import mute_main
+
 
 app= typer.Typer()
 
