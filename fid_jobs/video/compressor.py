@@ -9,4 +9,6 @@ def compress_main(app: typer.Typer):
         ffmpeg()
         ckvideo(vid)
         compress_out= vid.with_stem(f"{vid.stem}_compressed").with_suffix(".mkv")
-        subprocess.run(["ffmpeg", "-i", str(vid),"-c:v", "libx264", "-crf", str(crf), "-preset","medium","-c:a","aac","-b:a","96k","-y",str(compress_out),], check=True)
+        subprocess.run(
+            ["ffmpeg", "-i", str(vid),"-c:v", "libx264", "-crf", str(crf), "-preset","medium","-c:a","aac","-b:a","96k","-y",str(compress_out),]
+            , check=True)
