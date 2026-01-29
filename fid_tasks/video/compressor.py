@@ -1,7 +1,7 @@
 import typer
 import subprocess
 from pathlib import Path
-from .error_handling import ffmpeg , ckvideo
+from ...initial_files.error_handling import ffmpeg , ckvideo
 
 def compress_main(app: typer.Typer):
     @app.command()

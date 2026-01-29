@@ -1,11 +1,11 @@
 import typer
 from .welcome import welcome
-from .fid_tasks.extract.audio import audio_main
-from .fid_tasks.extract.frames import frames_main
-from .fid_tasks.audio.mute import mute_main
-from .fid_tasks.video.compressor import compress_main
-from .fid_tasks.video.gif import gif_main
-from .fid_tasks.info import info_main
+from ..fid_tasks.extract.audio import audio_main
+from ..fid_tasks.extract.frames import frames_main
+from ..fid_tasks.audio.mute import mute_main
+from ..fid_tasks.video.compressor import compress_main
+from ..fid_tasks.video.gif import gif_main
+from ..fid_tasks.info import info_main
 
 
 app= typer.Typer()
