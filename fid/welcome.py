@@ -6,9 +6,9 @@ import pyfiglet
 console = Console()
 
 def welcome():
-    ascii=pyfiglet.figlet_format("fid-ffmpeg",font="slant")
+    ascii=pyfiglet.figlet_format("fid-ffmpeg",font="bloody")
     logo = Text(ascii)
-    logo.stylize("bold gradient(blue, magenta)")
+    logo.stylize("bold gradient(cyan, magenta)")
     console.print(logo, justify="center")
     content =(
         "[bold]fid-ffmpeg Helper[/bold]\n\n"
@@ -20,4 +20,4 @@ def welcome():
         " • mute     Remove audio\n"
         " • compress Compress video\n\n"
         "[dim]Run : fid <command> <video path>[/dim]")
-    console.print(Panel(content,title="fid-ffmpeg",border_style="cyan",expand=True))
+    console.print(Panel(content,title="v0.5.0",border_style="bright_blue",expand=False),justify="center")
