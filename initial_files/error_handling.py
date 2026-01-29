@@ -1,5 +1,4 @@
 import typer
-import subprocess
 from pathlib import Path
 import shutil
 
@@ -10,5 +9,5 @@ def ffmpeg():
 
 def ckvideo(vid:Path):
     if not vid.exists():
-     print("file doesn't exist :)")
-     raise typer.Exit()
+       print("file doesn't exist :)")
+       raise typer.Exit()
