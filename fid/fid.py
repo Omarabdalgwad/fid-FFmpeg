@@ -15,6 +15,7 @@ def start(ctx : typer.Context):
     if ctx.invoked_subcommand is None:
         welcome()
 
+        
 audio_main(app)
 compress_main(app)
 frames_main(app)
