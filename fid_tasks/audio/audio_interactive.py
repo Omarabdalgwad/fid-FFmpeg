@@ -46,11 +46,14 @@ def video_main(video_path):
         elif choice=="mute audio":
             mute(video_path)
 
+        elif choice=="speed up/down":
+            speed(video_path)
+
         elif choice=="normalize audio":
             normalize(video_path)
 
         elif choice=="decrease noise":
-            decrease(video_path)
+            denoise(video_path)
 
         elif choice=="mix two audio files":
             mix(video_path)
@@ -59,7 +62,7 @@ def video_main(video_path):
             compress(video_path)
 
         elif choice=="equalize audio":
-            equalize(video_path)
+            equalizer(video_path)
 
         elif choice=="change codec":
             codec(video_path)
