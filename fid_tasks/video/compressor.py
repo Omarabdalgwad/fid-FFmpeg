@@ -5,7 +5,7 @@ from ...initial_files.error_handling import ffmpeg , ckvideo
 
 def compress_main(app: typer.Typer):
     @app.command()
-    def compress(vid: Path, crf: int=28):
+    def compress(video_path: Path, crf: int=28):
         ffmpeg()
         ckvideo(vid)
         compress_out= vid.with_stem(f"{vid.stem}_compressed").with_suffix(".mkv")

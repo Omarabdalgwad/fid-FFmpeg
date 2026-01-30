@@ -1,4 +1,5 @@
 import typer
+import questionary
 from .welcome import welcome
 from ..fid_tasks.extract.audio import audio_main
 from ..fid_tasks.extract.frames import frames_main
@@ -14,6 +15,16 @@ app= typer.Typer()
 def start(ctx : typer.Context):
     if ctx.invoked_subcommand is None:
         welcome()
+
+video_path= questionary.path(
+   "enter the path to your video:"
+   ).ask()
+
+while true:
+    if Path(video_path).is_file():
+        break
+    else:
+        video_path= questionary.path(" it isn't a video Path ,enter the path to your video:").ask()
 
 
 audio_main(app)
