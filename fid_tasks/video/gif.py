@@ -5,7 +5,7 @@ from ...initial_files.error_handling import ffmpeg , ckvideo
 
 def gif_main(app: typer.Typer):
     @app.command()
-    def gif(vid: Path):
+    def gif(video_path: Path):
         ffmpeg()
         ckvideo(vid)
         gif_out=vid.with_suffix(".gif")
