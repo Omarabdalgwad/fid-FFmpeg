@@ -12,7 +12,7 @@ from .subtitles_convert import subtitles_convert
 from .chapters import chapters
 from .attachments import attachments
 
-def video_main(video_path):
+def extract_main(video_path):
 
     while True:
         choice= questionary.select(
