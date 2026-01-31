@@ -16,7 +16,7 @@ from .speed import speed
 from .normalize import normalize
 from .volume import volume
 
-def video_main(video_path):
+def audio_main(video_path):
 
     while True:
         choice= questionary.select(
