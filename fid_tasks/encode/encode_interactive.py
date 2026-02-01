@@ -12,7 +12,7 @@ def encode_main(video_path):
           choices=[
                 "encode to h264",
                 "encode to h265",
-                "encode to av1"
+                "encode to av1",
                 "Back to main menue",
                 "exit"
             ]).ask()
