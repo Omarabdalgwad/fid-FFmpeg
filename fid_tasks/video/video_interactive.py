@@ -16,7 +16,7 @@ def video_main(video_path):
         choice= questionary.select(
            "select the editing option you want:",
           choices=[
-             "compress the video",
+                "compress the video",
                 "make gif",
                 "speed up/down",
                 "change fbs",
