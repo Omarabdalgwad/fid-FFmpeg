@@ -22,7 +22,7 @@ video_path= questionary.path(
 
 while true:
     if Path(video_path).is_file():
-        break
+        fid_main(video_path)
     else:
         video_path= questionary.path(" it isn't a video Path ,enter the path to your video:").ask()
     

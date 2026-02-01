@@ -20,19 +20,19 @@ def fid_main(video_path):
                 "exit"
             ]).ask()
         if choice=="video editing":
-          h264(video_path)
+          video_main(video_path)
 
         elif choice=="audio editing":
-            h265(video_path)
+            audio_main(video_path)
         
         elif choice=="extract from the video":
-            av1(video_path)
+            extract_main(video_path)
 
         elif choice=="straming options":
-            av1(video_path)
+            stream_main(video_path)
         
         elif choice=="encoding options":
-            av1(video_path)
+            encode_main(video_path)
 
         elif choice=="exit":
            raise typer.Exit()
