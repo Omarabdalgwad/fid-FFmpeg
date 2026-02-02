@@ -43,7 +43,6 @@ FID
 ├─ pyproject.toml
 ├─ README.md
 └─ src
-   └─ fid
       ├─ fid.py
       ├─ fid_interactive.py
       ├─ initial_files
