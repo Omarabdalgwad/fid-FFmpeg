@@ -1,10 +1,10 @@
 import questionary
 import typer
-from ..fid_tasks.audio import audio_interactive.audio_main
-from ..fid_tasks.audio import encode_interactive.encode_main
-from ..fid_tasks.audio import extract_interactive.extract_main
-from ..fid_tasks.audio import stream_interactive.stream_main
-from ..fid_tasks.audio import video_interactive.video_main
+from .tasks.audio.audio_interactive import audio_main
+from .tasks.encode.encode_interactive import encode_main
+from .tasks.extract.extract_interactive import extract_main
+from .tasks.stream.stream_interactive import stream_main
+from .tasks.video.video_interactive import video_main
 
 def fid_main(video_path):
 
@@ -13,9 +13,9 @@ def fid_main(video_path):
            "select the editing option you want:",
           choices=[
                 "video editing",
-                "audio editing",
-                "extract from media",
-                "straming options",
+                "audio editing",               
+                "extract from the video",
+                "streaming options",
                 "encoding options",
                 "exit"
             ]).ask()
@@ -28,7 +28,7 @@ def fid_main(video_path):
         elif choice=="extract from the video":
             extract_main(video_path)
 
-        elif choice=="straming options":
+        elif choice=="streaming options":
             stream_main(video_path)
         
         elif choice=="encoding options":

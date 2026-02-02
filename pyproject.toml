@@ -3,10 +3,14 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "fid-ffmpeg"
-version = "0.4.0"
+version = "0.4.2"
 description = " based ffmpeg CLI for video operations"
 readme = "README.md"
 authors = [{ name = "omar_abdalgwad", email = "ahlawyomar95@gmail.com" }]
-dependencies = ["typer>=0.7"]
+dependencies = ["typer>=0.7","questionary>=1.10"]
+[tool.setuptools]
+package-dir = { "" = "src" }
+[tool.setuptools.packages.find]
+where = ["src"]
 [project.scripts]
 fid = "fid.fid:app"

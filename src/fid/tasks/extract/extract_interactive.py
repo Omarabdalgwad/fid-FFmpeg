@@ -27,9 +27,9 @@ def extract_main(video_path):
                 "extract audio_track",
                 "extract audio_channels",
                 "extract subtitles_track",
-                "subtitles_converter",
+                "subtitles converter",
                 "extract attachments",
-                "Back to main menue",
+                "Back to main menu",
                 "exit"
             ]).ask()
         if choice=="extract audio":
@@ -59,13 +59,13 @@ def extract_main(video_path):
         elif choice=="extract subtitles_track":
             subtitles_track(video_path)
 
-        elif choice=="subtitles_converter":
+        elif choice=="subtitles converter":
             subtitles_convert(video_path)
 
         elif choice=="extract attachments":
             attachments(video_path)
 
-        elif choice=="Back to main menue":
+        elif choice=="Back to main menu":
             return
 
         elif choice=="exit":
