@@ -13,7 +13,7 @@ def fid_main(video_path):
            "select the editing option you want:",
           choices=[
                 "video editing",
-                "audio editing",
+                "audio editing",               
                 "extract from the video",
                 "streaming options",
                 "encoding options",
