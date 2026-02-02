@@ -37,7 +37,7 @@ def audio_main(video_path):
                 "trim audio",
                 "replace audio",
                 "delay audio",
-                "Back to main menue",
+                "Back to main menu",
                 "exit"
             ]).ask()
         if choice==  "volume up/down":
@@ -85,7 +85,7 @@ def audio_main(video_path):
         elif choice=="delay audio":
             delay(video_path)
 
-        elif choice=="Back to main menue":
+        elif choice=="Back to main menu":
             return
 
         elif choice=="exit":

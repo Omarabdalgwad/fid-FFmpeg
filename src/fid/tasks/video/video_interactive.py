@@ -19,13 +19,13 @@ def video_main(video_path):
                 "compress the video",
                 "make gif",
                 "speed up/down",
-                "change fbs",
+                "change fps",
                 "concat videos",
                 "crop video",
                 "resize video",
                 "rotate video",
                 "trim video",
-                "Back to main menue",
+                "Back to main menu",
                 "exit"
             ]).ask()
         if choice=="compress the video":
@@ -37,7 +37,7 @@ def video_main(video_path):
         elif choice=="speed up/down":
             speed(video_path)
 
-        elif choice=="change fbs":
+        elif choice=="change fps":
             fps(video_path)
 
         elif choice=="concat videos":
@@ -55,7 +55,7 @@ def video_main(video_path):
         elif choice=="trim video":
             trim(video_path)
 
-        elif choice=="Back to main menue":
+        elif choice=="Back to main menu":
             return
 
         elif choice=="exit":

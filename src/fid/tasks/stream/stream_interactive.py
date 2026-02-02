@@ -6,7 +6,7 @@ from .dash import dash
 from .srt import srt
 from .udp import udp
 from .rtsp import rtsp
-from .https import https
+from .http import http
 
 def stream_main(video_path):
 
@@ -15,30 +15,27 @@ def stream_main(video_path):
            "select the streaming option you want:",
           choices=[
                 "stream with hls",
-                "stram with rtmp",
-                "stram with dash",
+                "stream with rtmp",
+                "stream with dash",
                 "stream with srt",
                 "stream with udp",
                 "stream with rtsp",
                 "stream with http",
-                "back to main menue",
+                "Back to main menu",
                 "exit"
             ]).ask()
 
         if choice=="stream with hls":
            hls(video_path)
 
-        elif choice=="stram with rtmp":
+        elif choice=="stream with rtmp":
             rtmp(video_path)
 
-        elif choice=="stram with dash":
+        elif choice=="stream with dash":
             dash(video_path)
         
         elif choice=="stream with srt":
             srt(video_path)
-        
-        elif choice=="stram with dash":
-            dash(video_path)
         
         elif choice=="stream with udp":
             udp(video_path)
@@ -49,7 +46,7 @@ def stream_main(video_path):
         elif choice=="stream with http":
             http(video_path)
 
-        elif choice=="Back to main menue":
+        elif choice=="Back to main menu":
             return
 
         elif choice=="exit":

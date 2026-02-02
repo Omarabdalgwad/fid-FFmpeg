@@ -7,6 +7,6 @@ def gif_main(app: typer.Typer):
     @app.command()
     def gif(video_path: Path):
         ffmpeg()
-        ckvideo(vid)
-        gif_out=vid.with_suffix(".gif")
-        subprocess.run(["ffmpeg", "-i", str(vid), "-t", "3", "-vf", "scale=320:-1", "-y", str(gif_out)], check=True)
+        ckvideo(video_path)
+        gif_out=video_path.with_suffix(".gif")
+        subprocess.run(["ffmpeg", "-i", str(video_path), "-t", "3", "-vf", "scale=320:-1", "-y", str(gif_out)], check=True)
