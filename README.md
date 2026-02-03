@@ -40,13 +40,13 @@ For more advanced options, use the interactive mode by running `fid` without arg
 
 
 ```
-```
 
 FID
 ├─ LICENSE
 ├─ pyproject.toml
 ├─ README.md
-└─ src
+└─ src/
+   fid/
    ├─ fid.py
    ├─ fid_interactive.py
    ├─ initial_files
