@@ -16,6 +16,9 @@ def encode_main(video_path):
                 "Back to main menu",
                 "exit"
             ]).ask()
+        if choice is None:
+            raise typer.Exit()
+            
         if choice=="encode to h264":
           h264(video_path)
 

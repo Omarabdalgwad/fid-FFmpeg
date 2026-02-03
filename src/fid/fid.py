@@ -22,12 +22,15 @@ def start(ctx : typer.Context):
 
     while True:
         video_path= questionary.path("enter the path to your video:").ask()
+        if video_path is None:
+            raise typer.Exit()
         if Path(video_path).is_file():
             fid_main(video_path)
             break
         else:
             video_path= questionary.path(" it isn't a video Path ,enter the path to your video:").ask()
-               
+            if video_path is None:
+               raise typer.Exit() 
 audio_main(app)
 compress_main(app)
 frames_main(app)

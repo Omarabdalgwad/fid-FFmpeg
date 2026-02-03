@@ -28,6 +28,10 @@ def video_main(video_path):
                 "Back to main menu",
                 "exit"
             ]).ask()
+
+        if choice is None:
+            raise typer.Exit()
+            
         if choice=="compress the video":
           compress(video_path)
 

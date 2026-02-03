@@ -19,6 +19,10 @@ def fid_main(video_path):
                 "encoding options",
                 "exit"
             ]).ask()
+            
+        if choice is None:
+            raise typer.Exit()
+
         if choice=="video editing":
           video_main(video_path)
 

@@ -27,11 +27,14 @@ def extract_main(video_path):
                 "extract audio_track",
                 "extract audio_channels",
                 "extract subtitles_track",
-                "subtitles converter",
+                "subtitles convert",
                 "extract attachments",
                 "Back to main menu",
                 "exit"
             ]).ask()
+        if choice is None:
+            raise typer.Exit()
+
         if choice=="extract audio":
            audio(video_path)
 
@@ -59,7 +62,7 @@ def extract_main(video_path):
         elif choice=="extract subtitles_track":
             subtitles_track(video_path)
 
-        elif choice=="subtitles converter":
+        elif choice=="subtitles convert":
             subtitles_convert(video_path)
 
         elif choice=="extract attachments":

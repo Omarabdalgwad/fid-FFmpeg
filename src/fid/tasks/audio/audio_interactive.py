@@ -40,6 +40,10 @@ def audio_main(video_path):
                 "Back to main menu",
                 "exit"
             ]).ask()
+
+        if choice is None:
+            raise typer.Exit()
+
         if choice==  "volume up/down":
           volume(video_path)
 

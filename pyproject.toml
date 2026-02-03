@@ -1,16 +1,46 @@
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
 [project]
 name = "fid-ffmpeg"
-version = "0.4.2"
-description = " based ffmpeg CLI for video operations"
+version = "0.4.4"  
+description = "FFmpeg-based CLI tool for video and audio operations like editing, extracting, streaming, and encoding"
 readme = "README.md"
-authors = [{ name = "omar_abdalgwad", email = "ahlawyomar95@gmail.com" }]
-dependencies = ["typer>=0.7","questionary>=1.10"]
+authors = [{ name = "Omar Abdalgwad", email = "ahlawyomar95@gmail.com" }]
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+    "typer>=0.7",
+    "questionary>=1.10",
+    "rich>=13.0",
+    "pyfiglet>=0.8"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
 [tool.setuptools]
 package-dir = { "" = "src" }
+
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/Omarabdalgwad/fid-FFmpeg"
+Repository = "https://github.com/Omarabdalgwad/fid-FFmpeg.git"
+Documentation = "https://github.com/Omarabdalgwad/fid-FFmpeg#readme"
+Issues = "https://github.com/Omarabdalgwad/fid-FFmpeg/issues"
+
 [project.scripts]
-fid = "fid.fid:app"
+fid = "fid:app"
