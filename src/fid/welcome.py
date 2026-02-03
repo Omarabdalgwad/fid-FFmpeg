@@ -20,4 +20,4 @@ def welcome():
         " • mute     Remove audio\n"
         " • compress Compress video\n\n"
         "[dim]Run : fid <command> <video path>[/dim]")
-    console.print(Panel(content,title="v0.5.0",border_style="bright_blue",expand=False),justify="center")
+    console.print(Panel(content,title="v0.4.3",border_style="bright_blue",expand=False),justify="center")
