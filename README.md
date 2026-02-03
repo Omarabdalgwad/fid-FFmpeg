@@ -8,7 +8,6 @@ fid
 https://github.com/user-attachments/assets/abcc8aa0-3ada-4548-8f99-987687cfccd9
 
 ## Requirements
-
 - python >=3.9 : [Download Python](https://www.python.org/downloads/)
 - ffmpeg : [Download FFmpeg](https://www.ffmpeg.org/download.html)
 - install fid-cli with pip :
