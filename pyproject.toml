@@ -43,4 +43,4 @@ Documentation = "https://github.com/Omarabdalgwad/fid-FFmpeg#readme"
 Issues = "https://github.com/Omarabdalgwad/fid-FFmpeg/issues"
 
 [project.scripts]
-fid = "fid:app"
+fid = "fid.fid:app"
