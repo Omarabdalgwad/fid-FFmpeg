@@ -1,12 +1,12 @@
 import questionary
 import typer
-from .hls import hls
-from .rtmp import rtmp
-from .dash import dash
-from .srt import srt
-from .udp import udp
-from .rtsp import rtsp
-from .http import http
+#from .hls import hls
+#from .rtmp import rtmp
+#from .dash import dash
+#from .srt import srt
+#from .udp import udp
+#from .rtsp import rtsp
+#from .http import http
 
 def stream_main(video_path):
 
@@ -27,28 +27,7 @@ def stream_main(video_path):
             
         if choice is None:
             raise typer.Exit()
-
-        if choice=="stream with hls":
-           hls(video_path)
-
-        elif choice=="stream with rtmp":
-            rtmp(video_path)
-
-        elif choice=="stream with dash":
-            dash(video_path)
         
-        elif choice=="stream with srt":
-            srt(video_path)
-        
-        elif choice=="stream with udp":
-            udp(video_path)
-        
-        elif choice=="stream with rtsp":
-            rtsp(video_path)
-        
-        elif choice=="stream with http":
-            http(video_path)
-
         elif choice=="Back to main menu":
             return
 

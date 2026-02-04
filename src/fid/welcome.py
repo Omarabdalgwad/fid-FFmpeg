@@ -8,7 +8,7 @@ console = Console()
 def welcome():
     ascii=pyfiglet.figlet_format("fid-ffmpeg",font="bloody")
     logo = Text(ascii)
-    logo.stylize("bold gradient(cyan, magenta)")
+    logo.stylize("bold magenta")
     console.print(logo, justify="center")
     content =(
         "[bold]fid-ffmpeg Helper[/bold]\n\n"

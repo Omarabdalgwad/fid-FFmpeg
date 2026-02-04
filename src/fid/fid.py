@@ -24,13 +24,14 @@ def start(ctx : typer.Context):
         video_path= questionary.path("enter the path to your video:").ask()
         if video_path is None:
             raise typer.Exit()
-        if Path(video_path).is_file():
-            fid_main(video_path)
+
+        cPath= Path(video_path.strip('"').strip("'"))
+        if cPath.is_file():
+            fid_main(str(cPath))
             break
         else:
-            video_path= questionary.path(" it isn't a video Path ,enter the path to your video:").ask()
-            if video_path is None:
-               raise typer.Exit() 
+            print(f"[red]Error: '{video_path}' is not a valid file path. Please try again.[/red]") 
+
 audio_main(app)
 compress_main(app)
 frames_main(app)

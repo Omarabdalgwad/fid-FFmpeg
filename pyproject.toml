@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fid-ffmpeg"
-version = "0.4.4"  
+version = "0.5.1"  
 description = "FFmpeg-based CLI tool for video and audio operations like editing, extracting, streaming, and encoding"
 readme = "README.md"
 authors = [{ name = "Omar Abdalgwad", email = "ahlawyomar95@gmail.com" }]
@@ -43,4 +43,4 @@ Documentation = "https://github.com/Omarabdalgwad/fid-FFmpeg#readme"
 Issues = "https://github.com/Omarabdalgwad/fid-FFmpeg/issues"
 
 [project.scripts]
-fid = "fid:app"
+fid = "fid.fid:app"
