@@ -5,7 +5,7 @@ import typer
 #from .h265 import h265
 #from .av1 import av1
 
-def encode_main(video_path):
+def encode_main(cPath):
 
     while True:
         choice= questionary.select(

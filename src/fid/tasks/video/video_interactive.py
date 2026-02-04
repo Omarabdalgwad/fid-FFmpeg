@@ -10,7 +10,7 @@ from .gif import gif
 #from .speed import speed
 #from .trim import trim
 
-def video_main(video_path):
+def video_main(cPath):
 
     while True:
         choice= questionary.select(
@@ -33,12 +33,10 @@ def video_main(video_path):
             raise typer.Exit()
             
         if choice=="compress the video":
-           compress(video_path)
+           compress(cPath)
      
         elif choice=="make gif":
-            gif(video_path)
-        
-        
+            gif(cPath)
         
         elif choice=="Back to main menu":
             return

@@ -12,7 +12,7 @@ from .frames import frames
 #from .chapters import chapters
 #from .attachments import attachments
 
-def extract_main(video_path):
+def extract_main(cPath):
 
     while True:
         choice= questionary.select(
@@ -36,10 +36,10 @@ def extract_main(video_path):
             raise typer.Exit()
 
         if choice=="extract audio":
-           audio(video_path)
+           audio(cPath)
 
         elif choice=="extract frames":
-            frames(video_path)
+            frames(cPath)
 
         elif choice=="Back to main menu":
             return

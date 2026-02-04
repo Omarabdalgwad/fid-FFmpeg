@@ -8,7 +8,7 @@ import typer
 #from .rtsp import rtsp
 #from .http import http
 
-def stream_main(video_path):
+def stream_main(cPath):
 
     while True:
         choice= questionary.select(

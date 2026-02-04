@@ -24,19 +24,19 @@ def fid_main(cPath):
             raise typer.Exit()
 
         if choice=="video editing":
-           video_main(video_path)
+           video_main(cPath)
 
         elif choice=="audio editing":
-            audio_main(video_path)
+            audio_main(cPath)
         
         elif choice=="extract from the video":
-            extract_main(video_path)
+             extract_main(cPath)
 
         elif choice=="streaming options":
-            stream_main(video_path)
+            stream_main(cPath)
         
         elif choice=="encoding options":
-            encode_main(video_path)
+            encode_main(cPath)
 
         elif choice=="exit":
             raise typer.Exit()
