@@ -4,10 +4,10 @@ from pathlib import Path
 from ...initial_files.error_handling import ffmpeg , ckvideo
 
 
-def audio(video_path: Path):
+def audio(cPath: Path):
     ffmpeg()
-    ckvideo(video_path)
-    audio_out=video_path.with_suffix(".mp3")
-    subprocess.run(["ffmpeg", "-i", str(video_path), "-vn", "-acodec", "libmp3lame", "-y", str(audio_out)], check=True)
+    ckvideo(cPath)
+    audio_out=cPath.with_suffix(".mp3")
+    subprocess.run(["ffmpeg", "-i", str(cPath), "-vn", "-acodec", "libmp3lame", "-y", str(audio_out)], check=True)
 def audio_main(app: typer.Typer):
     app.command()(audio)

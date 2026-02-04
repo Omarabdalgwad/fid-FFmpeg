@@ -4,13 +4,13 @@ from pathlib import Path
 from ...initial_files.error_handling import ffmpeg , ckvideo
 
 
-def resize(video_path: Path, width: int):
+def resize(cPath: Path, width: int):
     ffmpeg()
-    ckvideo(video_path)
-    resize_out= video_path.with_stem(f"{video_path.stem}_{width}w").with_suffix(".mp4")
+    ckvideo(cPath)
+    resize_out= cPath.with_stem(f"{cPath.stem}_{width}w").with_suffix(".mp4")
     subprocess.run(
             ["ffmpeg",
-                "-i", str(video_path),
+                "-i", str(cPath),
                 "-vf", f"scale={width}:-1",
                 "-c:v", "libx264",
                 "-preset", "medium",

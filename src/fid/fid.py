@@ -27,7 +27,7 @@ def start(ctx : typer.Context):
 
         cPath= Path(video_path.strip('"').strip("'"))
         if cPath.is_file():
-            fid_main(str(cPath))
+            fid_main(cPath)
             break
         else:
             print(f"[red]Error: '{video_path}' is not a valid file path. Please try again.[/red]") 

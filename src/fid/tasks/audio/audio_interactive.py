@@ -16,7 +16,7 @@ from .mute import mute
 #from .normalize import normalize
 #from .volume import volume
 
-def audio_main(video_path):
+def audio_main(cPath):
 
     while True:
         choice= questionary.select(
@@ -45,49 +45,49 @@ def audio_main(video_path):
             raise typer.Exit()
 
         if choice==  "volume up/down":
-          volume(video_path)
+          volume(cPath)
 
         elif choice=="mute audio":
-            mute(video_path)
+            mute(cPath)
 
         elif choice=="speed up/down":
-            speed(video_path)
+            speed(cPath)
 
         elif choice=="normalize audio":
-            normalize(video_path)
+            normalize(cPath)
 
         elif choice=="decrease noise":
-            denoise(video_path)
+            denoise(cPath)
 
         elif choice=="mix two audio files":
-            mix(video_path)
+            mix(cPath)
 
         elif choice=="compress audio file":
-            compress(video_path)
+            compress(cPath)
 
         elif choice=="equalize audio":
-            equalizer(video_path)
+            equalizer(cPath)
 
         elif choice=="change codec":
-            codec(video_path)
+            codec(cPath)
 
         elif choice=="change bitrate":
-            bitrate(video_path)
+            bitrate(cPath)
 
         elif choice=="change channels":
-            channels(video_path)
+            channels(cPath)
 
         elif choice=="add fade in/out":
-            fade(video_path)
+            fade(cPath)
 
         elif choice=="trim audio":
-            trim(video_path)
+            trim(cPath)
 
         elif choice=="replace audio":
-            replace(video_path)
+            replace(cPath)
 
         elif choice=="delay audio":
-            delay(video_path)
+            delay(cPath)
 
         elif choice=="Back to main menu":
             return
