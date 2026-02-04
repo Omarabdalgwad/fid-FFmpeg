@@ -6,7 +6,7 @@ from .tasks.extract.extract_interactive import extract_main
 from .tasks.stream.stream_interactive import stream_main
 from .tasks.video.video_interactive import video_main
 
-def fid_main(video_path):
+def fid_main(cPath):
 
     while True:
         choice= questionary.select(
@@ -24,7 +24,7 @@ def fid_main(video_path):
             raise typer.Exit()
 
         if choice=="video editing":
-          video_main(video_path)
+           video_main(video_path)
 
         elif choice=="audio editing":
             audio_main(video_path)
@@ -39,4 +39,4 @@ def fid_main(video_path):
             encode_main(video_path)
 
         elif choice=="exit":
-           raise typer.Exit()
+            raise typer.Exit()

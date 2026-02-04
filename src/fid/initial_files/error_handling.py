@@ -8,6 +8,7 @@ def ffmpeg():
        raise typer.Exit()
 
 def ckvideo(video_path:Path):
-    if not vid.exists():
+    path_str = Path(video_path)
+    if not path_str.exists():
        print("file doesn't exist :)")
        raise typer.Exit()

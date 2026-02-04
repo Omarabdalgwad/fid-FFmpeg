@@ -2,15 +2,15 @@ import questionary
 import typer
 from .audio import audio
 from .frames import frames
-from .thumbnails import thumbnails
-from .keyframes import keyframes
-from .audio_track import audio_track
-from .audio_channels import audio_channels
-from .subtitles import subtitles
-from .subtitles_track import subtitles_track
-from .subtitles_convert import subtitles_convert
-from .chapters import chapters
-from .attachments import attachments
+#from .thumbnails import thumbnails
+#from .keyframes import keyframes
+#from .audio_track import audio_track
+#from .audio_channels import audio_channels
+#from .subtitles import subtitles
+#from .subtitles_track import subtitles_track
+#from .subtitles_convert import subtitles_convert
+#from .chapters import chapters
+#from .attachments import attachments
 
 def extract_main(video_path):
 
@@ -40,33 +40,6 @@ def extract_main(video_path):
 
         elif choice=="extract frames":
             frames(video_path)
-
-        elif choice=="extract subtitles":
-            subtitles(video_path)
-
-        elif choice=="extract chapters":
-            chapters(video_path)
-
-        elif choice=="extract thumbnails":
-            thumbnails(video_path)
-
-        elif choice=="extract keyframes":
-            keyframes(video_path)
-
-        elif choice=="extract audio_track":
-            audio_track(video_path)
-
-        elif choice=="extract audio_channels":
-            audio_channels(video_path)
-
-        elif choice=="extract subtitles_track":
-            subtitles_track(video_path)
-
-        elif choice=="subtitles convert":
-            subtitles_convert(video_path)
-
-        elif choice=="extract attachments":
-            attachments(video_path)
 
         elif choice=="Back to main menu":
             return

@@ -1,8 +1,9 @@
+
 import questionary
 import typer
-from .h264 import h264
-from .h265 import h265
-from .av1 import av1
+#from .h264 import h264
+#from .h265 import h265
+#from .av1 import av1
 
 def encode_main(video_path):
 
@@ -19,15 +20,7 @@ def encode_main(video_path):
         if choice is None:
             raise typer.Exit()
             
-        if choice=="encode to h264":
-          h264(video_path)
-
-        elif choice=="encode to h265":
-            h265(video_path)
-
-        elif choice=="encode to av1":
-            av1(video_path)
-
+       
         elif choice=="Back to main menu":
             return
 
