@@ -13,6 +13,11 @@ from .gif import gif
 def video_main(cPath):
 
     while True:
+        print(f"""
+╔══════════════════════════════════════╗
+║          VIDEO EDITING MENU          ║
+╚══════════════════════════════════════╝
+""")
         choice= questionary.select(
            "select the editing option you want:",
           choices=[

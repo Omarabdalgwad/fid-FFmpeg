@@ -15,6 +15,12 @@ from .frames import frames
 def extract_main(cPath):
 
     while True:
+        print(f"""
+╔══════════════════════════════════════╗
+║          EXTRACTING MENU          ║
+╚══════════════════════════════════════╝
+""")
+
         choice= questionary.select(
            "select the editing option you want:",
           choices=[
