@@ -1,6 +1,6 @@
 import questionary
 import typer
-#from .denoise import denoise
+from .denoise import denoise
 #from .equalizer import equalizer
 #from .compressor import compress
 #from .codec import codec
@@ -43,21 +43,15 @@ def audio_main(cPath):
 
         if choice is None:
             raise typer.Exit()
-
-        if choice==  "volume up/down":
-          volume(cPath)
+            
+        if choice=="decrease noise":
+            denoise(cPath)
 
         elif choice=="mute audio":
             mute(cPath)
 
-        elif choice=="speed up/down":
-            speed(cPath)
-
         elif choice=="normalize audio":
             normalize(cPath)
-
-        elif choice=="decrease noise":
-            denoise(cPath)
 
         elif choice=="mix two audio files":
             mix(cPath)
