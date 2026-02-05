@@ -11,6 +11,12 @@ import typer
 def stream_main(cPath):
 
     while True:
+        print(f"""
+╔══════════════════════════════════════╗
+║          STREAMING MENU          ║
+╚══════════════════════════════════════╝
+""")
+
         choice= questionary.select(
            "select the streaming option you want:",
           choices=[

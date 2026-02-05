@@ -8,6 +8,12 @@ import typer
 def encode_main(cPath):
 
     while True:
+        print(f"""
+╔══════════════════════════════════════╗
+║          ENCODING MENU          ║
+╚══════════════════════════════════════╝
+""")
+
         choice= questionary.select(
            "select the encoding option you want:",
           choices=[

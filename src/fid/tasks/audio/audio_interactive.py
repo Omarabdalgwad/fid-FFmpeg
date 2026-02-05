@@ -19,6 +19,12 @@ from .mute import mute
 def audio_main(cPath):
 
     while True:
+        print(f"""
+╔══════════════════════════════════════╗
+║          AUDIO EDITING MENU          ║
+╚══════════════════════════════════════╝
+""")
+
         choice= questionary.select(
            "select the editing option you want:",
           choices=[
