@@ -15,6 +15,7 @@ from .mute import mute
 #from .speed import speed
 #from .normalize import normalize
 #from .volume import volume
+from .enhance_audio import enhance_voice
 
 def audio_main(cPath):
 
@@ -28,6 +29,7 @@ def audio_main(cPath):
         choice= questionary.select(
            "select the editing option you want:",
           choices=[
+                "enhance voice",
                 "volume up/down",
                 "mute audio",
                 "normalize audio",
