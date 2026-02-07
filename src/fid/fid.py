@@ -25,12 +25,12 @@ def start(ctx : typer.Context):
         if video_path is None:
             raise typer.Exit()
 
-        cPath= Path(video_path.strip('"').strip("'"))
+        cPath= Path(video_path.strip('"').strip("'").replace("\\","/"))
         if cPath.is_file():
             fid_main(cPath)
             break
         else:
-            print(f"[red]Error: '{video_path}' is not a valid file path. Please try again.[/red]") 
+            print(f" '{video_path}' is not a valid file path. Please try again") 
 
 audio_main(app)
 compress_main(app)
