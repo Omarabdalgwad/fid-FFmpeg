@@ -55,9 +55,6 @@ def audio_main(cPath):
         if choice=="decrease noise":
             denoise(cPath)
 
-        elif choice=="enhance voice":
-            enhance_voice(cPath)
-
         elif choice=="mute audio":
             mute(cPath)
 
