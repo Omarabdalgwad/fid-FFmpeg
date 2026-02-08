@@ -5,7 +5,7 @@ from .compressor import compress
 #from .crop import crop
 #from .fps import fps
 from .gif import gif
-#from .resize import resize
+from .resize import resize
 #from .rotate import rotate
 #from .speed import speed
 #from .trim import trim
@@ -38,7 +38,30 @@ def video_main(cPath):
             raise typer.Exit()
             
         if choice=="compress the video":
-           compress(cPath)
+            compress_choice = questionary.select(
+                "Choose compression option:",
+                choices=[
+                    "smallest size",
+                    "medium size",
+                    "high quality",
+                    "Back to main menu",
+                    "exit"
+                ]
+                ).ask()
+
+            if compress_choice is None:
+                raise typer.Exit()
+            if compress_choice == "Back to main menu":
+                continue
+            if compress_choice == "exit":
+                raise typer.Exit()
+
+            if compress_choice == "smallest size": 
+               compress(cPath, crf=32, preset="slow", audio_bitrate="96k")
+            elif compress_choice == "medium size":
+                compress(cPath, crf=28, preset="slow", audio_bitrate="96k")
+            elif compress_choice == "high quality":
+                compress(cPath, crf=23, preset="slow", audio_bitrate="128k")
      
         elif choice=="make gif":
             gif(cPath)
