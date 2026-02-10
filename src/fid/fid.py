@@ -9,7 +9,7 @@ from .tasks.audio.mute import mute_main
 from .tasks.video.compressor import compress_main
 from .tasks.video.gif import gif_main
 from .tasks.info import info_main
-
+from .initial_files.error_handling import ffmpeg
 
 app= typer.Typer()
 
@@ -17,8 +17,9 @@ app= typer.Typer()
 def start(ctx : typer.Context):
     if ctx.invoked_subcommand is not None:
         return
-        
-    welcome()
+       
+    ffmpeg()    
+    welcome() 
 
     while True:
         video_path= questionary.path("enter the path to your video:").ask()
