@@ -42,7 +42,7 @@ def video_main(cPath):
                 "Choose compression option:",
                 choices=[
                     "smallest size",
-                    "medium size",
+                    "medium size (recommended)",
                     "high quality",
                     "Back to main menu",
                     "exit"
@@ -57,11 +57,11 @@ def video_main(cPath):
                 raise typer.Exit()
 
             if compress_choice == "smallest size": 
-               compress(cPath, crf=32, preset="slow", audio_bitrate="96k")
+               compress(cPath, crf=33, preset="slower", audio_bitrate="64k")
             elif compress_choice == "medium size":
-                compress(cPath, crf=28, preset="slow", audio_bitrate="96k")
+                compress(cPath, crf=27, preset="slow", audio_bitrate="96k")
             elif compress_choice == "high quality":
-                compress(cPath, crf=23, preset="slow", audio_bitrate="128k")
+                compress(cPath, crf=21, preset="slow", audio_bitrate="128k")
      
         elif choice=="make gif":
             gif(cPath)
