@@ -3,24 +3,32 @@ from pathlib import Path
 from tqdm import tqdm
 from rich.console import Console
 from time import sleep
-
+import shutil
 def ffmpeg():
+    
+    console=Console()
 
-    if platform.system()!= "Windows": 
+    if platform.system()!= "Windows" and shutil.which("ffmpeg") is None: 
        print("Windows only is supported for ffmpeg installation")
        print(" plz download ffmpeg from https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip")
+       exit()
 
     FFmpeg_installation= Path.home()/".fid-ffmpeg"
     FFmpeg_installation.mkdir(exist_ok=True)
     zip=FFmpeg_installation/"ffmpeg.zip"
     exe=FFmpeg_installation/"ffmpeg.exe"
-    console=Console()
+    
     with console.status("checking for ffmpeg....") as status:
         sleep(2)
         if exe.exists():
             print("ffmpeg already exists")
-            return
-        print("ffmpeg not found, downloading it ...")
+            return str(exe)
+        elif shutil.which("ffmpeg") is not None: 
+            print("ffmpeg already exists")
+            return shutil.which("ffmpeg")
+        else:
+            print("\nffmpeg not found, downloading it ....\n")
+
     r =requests.get("https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip",stream=True)
     total = int(r.headers.get("content-length"))
     with open(zip,"wb")as f:
@@ -37,8 +45,9 @@ def ffmpeg():
                    Path(extract).rename(exe)
                    print("ffmpeg installed .")
                    break
+    return str(exe)
 
 def ckvideo(cPath):
-    if not cPath.exists() or not cPath.is_file() or cPath.suffix not in [".mp4",".avi",".mkv",".mov",".flv",".wmv",".webm"]:  
+    if not cPath.exists() or not cPath.is_file() or cPath.suffix.lower() not in [".mp4",".avi",".mkv",".mov",".flv",".wmv",".webm"]:  
         print("incorrect video path or unsupported video fromat")
         exit()

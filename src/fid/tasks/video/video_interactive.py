@@ -61,7 +61,7 @@ def video_main(cPath):
             elif compress_choice == "medium size":
                 compress(cPath, crf=27, preset="slow", audio_bitrate="96k")
             elif compress_choice == "high quality":
-                compress(cPath, crf=21, preset="slow", audio_bitrate="128k")
+                compress(cPath, crf=21, preset="medium", audio_bitrate="128k")
      
         elif choice=="make gif":
             gif(cPath)

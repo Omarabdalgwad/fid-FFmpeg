@@ -9,7 +9,7 @@ def resize(cPath: Path, width: int):
     ckvideo(cPath)
     resize_out= cPath.with_stem(f"{cPath.stem}_{width}w").with_suffix(".mp4")
     subprocess.run(
-            ["ffmpeg",
+            [ffmpeg(),
                 "-i", str(cPath),
                 "-vf", f"scale={width}:-1",
                 "-c:v", "libx264",

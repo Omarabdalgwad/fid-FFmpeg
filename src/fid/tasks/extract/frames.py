@@ -10,6 +10,6 @@ def frames(cPath: Path):
     Fdir= cPath.parent
     frames_out= Fdir / "Frames" / cPath.stem
     frames_out.mkdir(parents=True,exist_ok=True)
-    subprocess.run(["ffmpeg", "-i", str(cPath),str(frames_out/ "frame_%02d.png")],check=True )
+    subprocess.run([ffmpeg(), "-i", str(cPath),str(frames_out/ "frame_%02d.png")],check=True )
 def frames_main(app: typer.Typer):
     app.command()(frames)
