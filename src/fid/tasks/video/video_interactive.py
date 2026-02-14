@@ -58,8 +58,8 @@ def video_main(cPath):
 
             if compress_choice == "smallest size": 
                compress(cPath, crf=33, preset="slower", audio_bitrate="64k")
-            elif compress_choice == "medium size":
-                compress(cPath, crf=27, preset="slow", audio_bitrate="96k")
+            elif compress_choice == "medium size (recommended)":
+                compress(cPath, crf=27, preset="medium", audio_bitrate="96k")
             elif compress_choice == "high quality":
                 compress(cPath, crf=21, preset="medium", audio_bitrate="128k")
      
