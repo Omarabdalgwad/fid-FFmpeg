@@ -6,9 +6,10 @@ from .compressor import compress
 from .fps import fps
 from .gif import gif
 from .resize import resize
-#from .rotate import rotate
+from .rotate import rotate
 #from .speed import speed
 #from .trim import trim
+
 
 def video_main(cPath):
 
