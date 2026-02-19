@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fid-ffmpeg"
-version = "0.5.1"  
+version = "0.5.3"  
 description = "FFmpeg-based CLI tool for video and audio operations like editing, extracting, streaming, and encoding"
 readme = "README.md"
 authors = [{ name = "Omar Abdalgwad", email = "ahlawyomar95@gmail.com" }]
@@ -14,7 +14,10 @@ dependencies = [
     "typer>=0.7",
     "questionary>=1.10",
     "rich>=13.0",
-    "pyfiglet>=0.8"
+    "pyfiglet>=0.8",
+    "requests>=2.28",
+    "tqdm>=4.65",
+    "colorama>=0.4"
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
