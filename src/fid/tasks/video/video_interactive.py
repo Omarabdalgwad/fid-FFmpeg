@@ -3,10 +3,10 @@ import typer
 from .compressor import compress
 #from .concat import concat
 #from .crop import crop
-from .fps import fps
+#from .fps import fps
 from .gif import gif
 from .resize import resize
-from .rotate import rotate
+#from .rotate import rotate
 #from .speed import speed
 #from .trim import trim
 

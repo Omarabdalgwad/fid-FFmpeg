@@ -1,7 +1,7 @@
 import questionary
 import typer
 from .denoise import denoise
-#from .equalizer import equalizer
+from .equalizer import equalizer
 #from .compressor import compress
 #from .codec import codec
 #from .bitrate import bitrate
