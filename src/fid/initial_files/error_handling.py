@@ -10,7 +10,7 @@ def ffmpeg():
 
     if platform.system()!= "Windows" and shutil.which("ffmpeg") is None: 
        print("Windows only is supported for ffmpeg installation")
-       print(" plz download ffmpeg from https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip")
+       print("pleaze download ffmpeg from https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip")
        exit()
 
     FFmpeg_installation= Path.home()/".fid-ffmpeg"
@@ -27,7 +27,7 @@ def ffmpeg():
             print("ffmpeg already exists")
             return shutil.which("ffmpeg")
         else:
-            print("\nffmpeg not found, downloading it ....\n")
+            print("\nFFmpeg not found , Downloading it....\n")
 
     r =requests.get("https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip",stream=True)
     total = int(r.headers.get("content-length"))
