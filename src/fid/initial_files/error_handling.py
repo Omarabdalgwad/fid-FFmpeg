@@ -6,6 +6,14 @@ from time import sleep
 import shutil
 def ffmpeg():
     
+    """
+    Ensure a usable FFmpeg executable is available and return its filesystem path.
+    
+    Checks for an existing ffmpeg executable in the configured installation directory or on PATH. On Windows, if ffmpeg is not present the function downloads a release ZIP, extracts ffmpeg.exe into ~/.fid-ffmpeg, and returns the installed executable path. On non-Windows systems, if ffmpeg is not found on PATH the function prints an instruction to obtain FFmpeg and exits the process.
+    
+    Returns:
+        str: Filesystem path to the ffmpeg executable.
+    """
     console=Console()
 
     if platform.system()!= "Windows" and shutil.which("ffmpeg") is None: 
