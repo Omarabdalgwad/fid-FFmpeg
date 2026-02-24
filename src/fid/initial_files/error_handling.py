@@ -10,7 +10,7 @@ def ffmpeg():
     """
     Ensure a usable FFmpeg executable is available and return its filesystem path.
     
-    On Windows the function will download and install ffmpeg.exe into ~/.fid-ffmpeg if not already present; on non-Windows systems the function verifies ffmpeg is on PATH and exits with instructions if it is not found.
+    On Windows, downloads and installs ffmpeg.exe into ~/.fid-ffmpeg if not already present; on non-Windows systems, verifies ffmpeg is available on PATH and prints instructions and exits if it is not found.
     
     Returns:
         str: Filesystem path to the ffmpeg executable.
@@ -58,11 +58,9 @@ def ffmpeg():
 
 def ckvideo(cPath):
     """
-    Validate that `cPath` points to an existing video file with a supported extension.
+    Check that `cPath` points to an existing video file with a supported extension.
     
-    If `cPath` does not exist, is not a file, or its suffix is not one of
-    ".mp4", ".avi", ".mkv", ".mov", ".flv", ".wmv", or ".webm", this function
-    prints "incorrect video path or unsupported video fromat" and exits the process.
+    If `cPath` does not exist, is not a file, or its suffix (case-insensitive) is not one of: .mp4, .avi, .mkv, .mov, .flv, .wmv, .webm, the function prints an error message and exits the process.
     
     Parameters:
         cPath (Path): Path-like object referencing the candidate video file.
