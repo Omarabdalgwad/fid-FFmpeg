@@ -4,6 +4,7 @@ from tqdm import tqdm
 from rich.console import Console
 from time import sleep
 import shutil
+import sys
 def ffmpeg():
     
     """
@@ -19,7 +20,7 @@ def ffmpeg():
     if platform.system()!= "Windows" and shutil.which("ffmpeg") is None: 
        print("Windows only is supported for ffmpeg installation")
        print("pleaze download ffmpeg from https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip")
-       exit()
+       sys.exit(1)
 
     FFmpeg_installation= Path.home()/".fid-ffmpeg"
     FFmpeg_installation.mkdir(exist_ok=True)
@@ -66,4 +67,4 @@ def ckvideo(cPath):
     """
     if not cPath.exists() or not cPath.is_file() or cPath.suffix.lower() not in [".mp4",".avi",".mkv",".mov",".flv",".wmv",".webm"]:  
         print("incorrect video path or unsupported video fromat")
-        exit()
+        sys.exit(1)
