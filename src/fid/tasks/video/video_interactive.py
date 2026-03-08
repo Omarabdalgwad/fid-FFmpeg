@@ -23,13 +23,13 @@ def video_main(cPath):
           choices=[
                 "compress the video",
                 "make gif",
-                "speed up/down",
-                "change fps",
-                "concat videos",
-                "crop video",
+                ##"speed up/down",
+                ##"change fps",
+                ##"concat videos",
+                ##"crop video",
                 "resize video",
-                "rotate video",
-                "trim video",
+                ##"rotate video",
+                ##"trim video",
                 "Back to main menu",
                 "exit"
             ]).ask()
@@ -46,8 +46,7 @@ def video_main(cPath):
                     "high quality",
                     "Back to main menu",
                     "exit"
-                ]
-                ).ask()
+                ]).ask()
 
             if compress_choice is None:
                 raise typer.Exit()
