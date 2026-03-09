@@ -8,7 +8,7 @@ import pyfiglet
 
 console = Console()
 
-def welcome():
+def ui():
     ascii = pyfiglet.figlet_format("fid-ffmpeg", font="slant")
     console.print(Text(ascii, style="green bold"))
     video_panel = Panel(
@@ -26,10 +26,10 @@ def welcome():
         title="Stream Options",
         border_style="green",
         box=box.ROUNDED,)
-    extra_panel = Panel(
+    extract_panel = Panel(
         "- Extract frames\n"
         "- Extract audio",
-        title="Extra Options",
+        title="Extract Options",
         border_style="green",
         box=box.ROUNDED,)
     encode_panel = Panel(
@@ -43,7 +43,7 @@ def welcome():
 
     left_grid = Table.grid(padding=(1, 2))
     left_grid.add_row(video_panel, audio_panel)
-    left_grid.add_row(extra_panel, stream_panel)
+    left_grid.add_row(extract_panel, stream_panel)
     left_grid.add_row(encode_panel, "")
     interactive = Panel(left_grid,title="Interactive Options",border_style="dim",box=box.DOUBLE,padding=(1, 2),)
     main_layout = Table.grid(padding=(2, 4))

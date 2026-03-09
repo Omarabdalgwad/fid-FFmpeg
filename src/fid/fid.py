@@ -1,7 +1,7 @@
 import typer
 import questionary
 from pathlib import Path
-from .welcome import welcome
+from .ui import ui
 from .fid_interactive import fid_main
 from .tasks.extract.audio import audio_main
 from .tasks.extract.frames import frames_main
@@ -19,7 +19,7 @@ def start(ctx : typer.Context):
         return
        
     ffmpeg()    
-    welcome() 
+    ui() 
 
     while True:
         video_path= questionary.path("enter the path to your video:").ask()
