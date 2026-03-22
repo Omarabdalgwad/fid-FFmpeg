@@ -5,9 +5,8 @@ from rich.console import Console
 from time import sleep
 import shutil
 import sys
+
 def ffmpeg():
-    
-   
     console=Console()
 
     if platform.system()!= "Windows" and shutil.which("ffmpeg") is None: 
