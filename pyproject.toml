@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "fid-ffmpeg"
 version = "0.5.4"  
-description = "FFmpeg-based CLI tool for video and audio operations like editing, extracting, streaming, and encoding"
+description = "FFmpeg based CLI tool for video and audio operations like editing, extracting,etc..."
 readme = "README.md"
-authors = [{ name = "Omar Abdalgwad", email = "ahlawyomar95@gmail.com" }]
+authors = [{ name = "Omar Abdalgwad mahmoud", email = "ahlawyomar95@gmail.com" }]
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
 dependencies = [
