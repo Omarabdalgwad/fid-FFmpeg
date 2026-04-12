@@ -21,7 +21,7 @@ https://github.com/user-attachments/assets/6063b46b-dd4a-4cb3-a318-869f37bcf60f
 Run `fid` for the interactive menu
 
 ## Features
-- Interactive CLI with menus for video, audio, extract, mute,compression, noise reduction
+- Interactive CLI with menus for video, audio, extract, mute, compression, noise reduction
 - Built with Typer for commands and Questionary for interactive prompts.
 - Rich console output for a modern look.
 
