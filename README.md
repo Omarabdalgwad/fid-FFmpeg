@@ -18,17 +18,7 @@ pip install fid-ffmpeg
 https://github.com/user-attachments/assets/6063b46b-dd4a-4cb3-a318-869f37bcf60f
 
 ## Usage
-Run `fid` for the interactive menu, or use direct commands:
-
-- `fid --help`: Show help for fid CLI.
-- `fid info "videoPath"`: Get all info about the video.
-- `fid audio "videoPath"`: Extract audio from the video.
-- `fid mute "videoPath"`: Mute the video.
-- `fid gif "videoPath"`: Create a GIF from the video.
-- `fid frames "videoPath"`: Extract all video frames into a folder.
-- `fid compress "videoPath"`: Compress the video to reduce file size.
-
-For more advanced options, use the interactive mode by running `fid` without arguments.
+Run `fid` for the interactive menu
 
 ## Features
 - Interactive CLI with menus for video, audio, extract, stream, and encode operations.
