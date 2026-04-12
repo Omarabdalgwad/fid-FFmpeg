@@ -5,7 +5,7 @@ Python wrapper around the FFmpeg command line tool for video operations.
 ```bash
 fid
 ```
-<img width="697" height="524" alt="image" src="https://github.com/user-attachments/assets/fe7ec6f5-a90a-4b50-9352-743a9288c14e" />
+<img width="797" height="619" alt="Screenshot 2026-04-12 033043" src="https://github.com/user-attachments/assets/2d7b837f-b93f-4825-b27c-3e2831cd419d" />
 
 ## Requirements
 - python >=3.9 : [Download Python](https://www.python.org/downloads/)
