@@ -15,8 +15,8 @@ def fid_main(cPath):
                 "video editing",
                 "audio editing",               
                 "extract from the video",
-                "streaming options",
-                "encoding options",
+                #"streaming options",
+                #"encoding options",
                 "exit"
             ]).ask()
             

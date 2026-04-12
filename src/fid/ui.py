@@ -15,9 +15,9 @@ def ui():
         "- Compress video\n"
         "- Create GIF\n",title="Video Options",border_style="green",box=box.ROUNDED,)
     audio_panel = Panel(
-        "- Extract audio\n"
-        "- Normalize audio\n"
-        "- Noise reduction",
+        "- mute audio\n"
+        "- enhance voice\n"
+        "- Noise reduction\n",
         title="Audio Options",
         border_style="green",
         box=box.ROUNDED,)
