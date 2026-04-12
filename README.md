@@ -10,7 +10,7 @@ fid
 ## Requirements
 - python >=3.9 : [Download Python](https://www.python.org/downloads/)
 - ffmpeg : [Download FFmpeg](https://www.ffmpeg.org/download.html)
-- install fid-cli with pip :
+- install fid-ffmpeg with pip :
 ```bash
 pip install fid-ffmpeg
 ```
