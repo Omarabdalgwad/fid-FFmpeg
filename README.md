@@ -1,4 +1,4 @@
-# fid-ffmpeg [![PyPI Downloads](https://static.pepy.tech/personalized-badge/fid-ffmpeg?period=total&units=international_system&left_color=black&right_color=green&left_text=downloads)](https://pepy.tech/project/fid-ffmpeg)
+# fid-ffmpeg [![PyPI Stats](/api/badges/fid-ffmpeg?period=total)](/packages/fid-ffmpeg)
 
 Python wrapper around the FFmpeg command line tool for video operations.
 
