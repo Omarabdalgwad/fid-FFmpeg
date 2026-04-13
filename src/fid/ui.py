@@ -49,4 +49,3 @@ def ui():
     main_layout = Table.grid(padding=(2, 4))
     main_layout.add_row(interactive, Align.center(capcut_panel))
     console.print(Align.left(main_layout))
-    console.print(Align.left(Panel("Usage: fid <input_file>",border_style="dim",)))
