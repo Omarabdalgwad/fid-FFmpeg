@@ -5,12 +5,12 @@ Python wrapper around the FFmpeg command line tool for video operations.
 ```bash
 fid
 ```
-https://github.com/user-attachments/assets/abcc8aa0-3ada-4548-8f99-987687cfccd9
+<img width="797" height="619" alt="Screenshot 2026-04-12 033043" src="https://github.com/user-attachments/assets/2d7b837f-b93f-4825-b27c-3e2831cd419d" />
 
 ## Requirements
 - python >=3.9 : [Download Python](https://www.python.org/downloads/)
 - ffmpeg : [Download FFmpeg](https://www.ffmpeg.org/download.html)
-- install fid-cli with pip :
+- install fid-ffmpeg with pip :
 ```bash
 pip install fid-ffmpeg
 ```
@@ -21,7 +21,7 @@ https://github.com/user-attachments/assets/6063b46b-dd4a-4cb3-a318-869f37bcf60f
 Run `fid` for the interactive menu
 
 ## Features
-- Interactive CLI with menus for video, audio, extract, stream, and encode operations.
+- Interactive CLI with menus for video, audio, extract, mute, compression, noise reduction
 - Built with Typer for commands and Questionary for interactive prompts.
 - Rich console output for a modern look.
 
