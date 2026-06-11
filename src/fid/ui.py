@@ -17,7 +17,8 @@ def ui():
     audio_panel = Panel(
         "- mute audio\n"
         "- enhance voice\n"
-        "- Noise reduction\n",
+        "- Noise reduction\n"
+        "- AI Driven Audio Noise Reduction (new)\n",
         title="Audio Options",
         border_style="green",
         box=box.ROUNDED,)
