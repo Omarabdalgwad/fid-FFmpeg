@@ -2,6 +2,9 @@
 
 Python wrapper around the FFmpeg command line tool for video operations.
 
+https://github.com/user-attachments/assets/ca55edee-229e-4976-9bdc-73174b755197
+
+
 ```bash
 fid
 ```
