@@ -1,14 +1,7 @@
 import questionary
 import typer
 from .compressor import compress
-#from .concat import concat
-#from .crop import crop
 from .gif import gif
-##from .resize import resize
-#from .rotate import rotate
-#from .speed import speed
-#from .trim import trim
-
 
 def video_main(cPath):
 
@@ -23,13 +16,6 @@ def video_main(cPath):
           choices=[
                 "compress the video",
                 "make gif",
-                ##"speed up/down",
-                ##"change fps",
-                ##"concat videos",
-                ##"crop video",
-                ##"resize video",
-                ##"rotate video",
-                ##"trim video",
                 "Back to main menu",
                 "exit"
             ]).ask()
