@@ -2,15 +2,6 @@ import questionary
 import typer
 from .audio import audio
 from .frames import frames
-#from .thumbnails import thumbnails
-#from .keyframes import keyframes
-#from .audio_track import audio_track
-#from .audio_channels import audio_channels
-#from .subtitles import subtitles
-#from .subtitles_track import subtitles_track
-#from .subtitles_convert import subtitles_convert
-#from .chapters import chapters
-#from .attachments import attachments
 
 def extract_main(cPath):
 
@@ -26,15 +17,6 @@ def extract_main(cPath):
           choices=[
                 "extract frames",
                 "extract audio",
-                #"extract subtitles",
-                #"extract chapters",
-                #"extract thumbnails",
-                #"extract keyframes",
-                #"extract audio_track",
-                #"extract audio_channels",
-                #"extract subtitles_track",
-                #"subtitles convert",
-                #"extract attachments",
                 "Back to main menu",
                 "exit"
             ]).ask()
